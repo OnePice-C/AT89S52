@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"8led.obj" 
+TO "dkled" 
+RAMSIZE(256) 

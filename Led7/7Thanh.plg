@@ -1,0 +1,83 @@
+<html>
+<body>
+<pre>
+<h1>µVision3 Build Log</h1>
+<h2>Project:</h2>
+E:\LT vi dieu khien\File CT\Led7\7Thanh.uv2
+Project File Date:  11/13/2019
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling led7.c...
+LED7.C(27): error C202: 'key': undefined identifier
+LED7.C(28): error C202: 'key': undefined identifier
+LED7.C(29): error C202: 'key': undefined identifier
+LED7.C(30): error C202: 'key': undefined identifier
+LED7.C(33): error C202: 'key': undefined identifier
+LED7.C(34): error C202: 'key': undefined identifier
+LED7.C(35): error C202: 'key': undefined identifier
+LED7.C(36): error C202: 'key': undefined identifier
+LED7.C(39): error C202: 'key': undefined identifier
+LED7.C(40): error C202: 'key': undefined identifier
+LED7.C(41): error C202: 'key': undefined identifier
+LED7.C(42): error C202: 'key': undefined identifier
+LED7.C(45): error C202: 'key': undefined identifier
+LED7.C(46): error C202: 'key': undefined identifier
+LED7.C(47): error C202: 'key': undefined identifier
+LED7.C(48): error C202: 'key': undefined identifier
+LED7.C(59): error C141: syntax error near '\'
+LED7.C(59): error C129: missing ';' before 'tra'
+Target not created
+Build target 'Target 1'
+compiling led7.c...
+LED7.C(22): error C141: syntax error near ';'
+LED7.C(60): error C141: syntax error near '\'
+LED7.C(60): error C129: missing ';' before 'tra'
+Target not created
+Build target 'Target 1'
+compiling led7.c...
+LED7.C(22): error C141: syntax error near ';'
+LED7.C(60): error C141: syntax error near '\'
+LED7.C(60): error C129: missing ';' before 'tra'
+Target not created
+Build target 'Target 1'
+compiling led7.c...
+LED7.C(60): error C141: syntax error near '\'
+LED7.C(60): error C129: missing ';' before 'tra'
+Target not created
+Build target 'Target 1'
+compiling led7.c...
+linking...
+Program Size: data=28.0 xdata=0 code=638
+creating hex file from "7Thanh"...
+"7Thanh" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling led7.c...
+linking...
+Program Size: data=28.0 xdata=0 code=641
+creating hex file from "7Thanh"...
+"7Thanh" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling led7.c...
+linking...
+Program Size: data=28.0 xdata=0 code=641
+creating hex file from "7Thanh"...
+"7Thanh" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling led7.c...
+linking...
+Program Size: data=28.0 xdata=0 code=638
+creating hex file from "7Thanh"...
+"7Thanh" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling led7.c...
+linking...
+Program Size: data=28.0 xdata=0 code=633
+creating hex file from "7Thanh"...
+"7Thanh" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling led7.c...
+linking...
+Program Size: data=28.0 xdata=0 code=638
+creating hex file from "7Thanh"...
+"7Thanh" - 0 Error(s), 0 Warning(s).

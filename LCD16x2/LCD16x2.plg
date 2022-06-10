@@ -1,0 +1,109 @@
+<html>
+<body>
+<pre>
+<h1>µVision3 Build Log</h1>
+<h2>Project:</h2>
+E:\LT vi dieu khien\File CT\LCD16x2\LCD16x2.uv2
+Project File Date:  11/18/2019
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling lcd16x2.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  MAIN
+    MODULE:  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  MAIN
+    MODULE:  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+    ADDRESS: 080DH
+Program Size: data=9.0 xdata=0 code=144
+"LCD16x2" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling lcd16x2.c...
+LCD16X2.C(14): error C202: 'tine': undefined identifier
+LCD16X2.C(79): error C141: syntax error near 'P0_2'
+Target not created
+Build target 'Target 1'
+compiling lcd16x2.c...
+LCD16X2.C(35): warning C276: constant in condition expression
+LCD16X2.C(45): warning C276: constant in condition expression
+LCD16X2.C(55): warning C276: constant in condition expression
+LCD16X2.C(79): error C141: syntax error near 'P0_2'
+Target not created
+Build target 'Target 1'
+compiling lcd16x2.c...
+LCD16X2.C(79): error C141: syntax error near 'P0_2'
+Target not created
+Build target 'Target 1'
+compiling lcd16x2.c...
+LCD16X2.C(87): warning C206: 'busy_lcd': missing function-prototype
+LCD16X2.C(88): error C202: 'LCD_RW': undefined identifier
+LCD16X2.C(89): error C202: 'LCD_RS': undefined identifier
+LCD16X2.C(90): error C202: 'LCD_E': undefined identifier
+LCD16X2.C(91): error C202: 'cmd': undefined identifier
+LCD16X2.C(92): error C202: 'LCD_E': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling lcd16x2.c...
+LCD16X2.C(87): warning C206: 'busy_lcd': missing function-prototype
+LCD16X2.C(88): error C202: 'LCD_RW': undefined identifier
+LCD16X2.C(89): error C202: 'LCD_RS': undefined identifier
+LCD16X2.C(90): error C202: 'LCD_E': undefined identifier
+LCD16X2.C(91): error C202: 'cmd': undefined identifier
+LCD16X2.C(92): error C202: 'LCD_E': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling lcd16x2.c...
+LCD16X2.C(88): error C202: 'LCD_RW': undefined identifier
+LCD16X2.C(89): error C202: 'LCD_RS': undefined identifier
+LCD16X2.C(90): error C202: 'LCD_E': undefined identifier
+LCD16X2.C(91): error C202: 'cmd': undefined identifier
+LCD16X2.C(92): error C202: 'LCD_E': undefined identifier
+LCD16X2.C(97): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(99): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(103): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(104): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(105): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(106): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(107): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(111): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(116): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(120): error C202: 'LCD_RW': undefined identifier
+LCD16X2.C(121): error C202: 'LCD_RS': undefined identifier
+LCD16X2.C(122): error C202: 'LCD_E': undefined identifier
+LCD16X2.C(124): error C202: 'LCD_E': undefined identifier
+LCD16X2.C(141): error C100: unprintable character 0x94 skipped
+LCD16X2.C(141): error C141: syntax error near '\'
+Target not created
+Build target 'Target 1'
+compiling lcd16x2.c...
+LCD16X2.C(91): error C202: 'cmd': undefined identifier
+LCD16X2.C(97): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(99): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(103): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(104): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(105): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(106): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(107): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(111): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(116): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(141): error C100: unprintable character 0x94 skipped
+LCD16X2.C(141): error C141: syntax error near '\'
+Target not created
+Build target 'Target 1'
+compiling lcd16x2.c...
+LCD16X2.C(91): error C202: 'cmd': undefined identifier
+LCD16X2.C(97): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(99): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(103): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(104): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(105): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(106): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(107): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(111): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(116): error C207: 'write_cmd_lcd': declared with 'void' parameter list
+LCD16X2.C(141): error C100: unprintable character 0x94 skipped
+LCD16X2.C(141): error C141: syntax error near '\'
+Target not created

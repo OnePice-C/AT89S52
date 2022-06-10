@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"out.obj" 
+TO "output" 
+RAMSIZE(256) 

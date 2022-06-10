@@ -1,0 +1,172 @@
+C51 COMPILER V8.05a   LCD16X2                                                              11/18/2019 21:21:52 PAGE 1   
+
+
+C51 COMPILER V8.05a, COMPILATION OF MODULE LCD16X2
+OBJECT MODULE PLACED IN lcd16x2.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE lcd16x2.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <stdio.h>
+   2          #include <math.h>
+   3          #include <AT89x52.h>
+   4          
+   5          #define RS P0_0
+   6          #define RW P0_1
+   7          #define EE P0_2
+   8          
+   9          unsigned char dl;
+  10          unsigned char mes[32];
+  11          void delay(unsigned int time)
+  12          {
+  13   1              int i;
+  14   1              for(i=0;i<time;i++);
+  15   1      }
+  16          unsigned read_key(void)
+  17          {
+  18   1              unsigned char du_lieu[4]={0xFE, 0xFD, 0xFB, 0xF7}, key, keys; 
+  19   1              int i;
+  20   1              for(i=0;i<4;i++)
+  21   1              {
+  22   2                      P0 = du_lieu[i];  
+  23   2                  keys =(P0&0xF0); 
+  24   2                      if(i==0)
+  25   2                      {
+  26   3                              switch (keys)
+  27   3                              {
+  28   4                                      case 0x70: key=1; return key;
+  29   4                                      case 0xB0: key=2; return key;
+  30   4                                      case 0xD0: key=3; return key;
+  31   4                                      case 0xE0: key=10; return key;
+  32   4                              }
+  33   3      
+  34   3                      }
+  35   2                      if(i==1)
+  36   2                      {
+  37   3                              switch(keys)
+  38   3                              {
+  39   4                                      case 0x70: key=4; return key;
+  40   4                                      case 0xB0: key=5; return key;
+  41   4                                      case 0xD0: key=6; return key;
+  42   4                                      case 0xE0: key=11; return key;
+  43   4                              }
+  44   3                      }
+  45   2                      if(i==2)
+  46   2                      {
+  47   3                              switch(keys)
+  48   3                              {
+  49   4                                      case 0x70: key=7; return key;
+  50   4                                      case 0xB0: key=8; return key;
+  51   4                                      case 0xD0: key=9; return key;
+  52   4                                      case 0xE0: key=12; return key;
+  53   4                              }
+  54   3                      }
+  55   2                      if(i==3)
+C51 COMPILER V8.05a   LCD16X2                                                              11/18/2019 21:21:52 PAGE 2   
+
+  56   2                      {
+  57   3                              switch(keys)
+  58   3                              {
+  59   4                                      case 0x70: key=13; return key;
+  60   4                                      case 0xB0: key=0; return key;
+  61   4                                      case 0xD0: key=15; return key;
+  62   4                                      case 0xE0: key=14; return key;
+  63   4                              }
+  64   3                      }
+  65   2              }
+  66   1      }
+  67          
+  68          void busy_lcd(void)
+  69          {
+  70   1              unsigned char du_lieu;
+  71   1              while(1)
+  72   1              {
+  73   2                      P2=0xFF;
+  74   2                      RS=0;
+  75   2                      RW=1;
+  76   2                      EE=1;
+  77   2                      du_lieu=P2;
+  78   2                      delay(1000);
+  79   2                      EE=0;
+  80   2                      if((du_lieu & 0x80)==0);
+  81   2                      break;
+  82   2              }
+  83   1      }
+  84          
+  85          void  write_cmd_lcd(void)
+  86          {
+  87   1                      busy_lcd();  
+  88   1                  RW = 0;       
+  89   1                      RS = 0; 
+  90   1                  EE = 1;    
+  91   1                  P2 =cmd;   
+*** ERROR C202 IN LINE 91 OF LCD16X2.C: 'cmd': undefined identifier
+  92   1                  EE = 0; 
+  93   1      }
+  94          void lcd_gotoxy (unsigned char x, unsigned char y)
+  95          {
+  96   1               if(y==0)      
+  97   1                write_cmd_lcd(0x80+x);
+*** ERROR C207 IN LINE 97 OF LCD16X2.C: 'write_cmd_lcd': declared with 'void' parameter list
+  98   1                if(y==1) 
+  99   1                write_cmd_lcd(0xc0+x);
+*** ERROR C207 IN LINE 99 OF LCD16X2.C: 'write_cmd_lcd': declared with 'void' parameter list
+ 100   1      }
+ 101          void init_lcd (void) 
+ 102           {   
+ 103   1            write_cmd_lcd(0x38); 
+*** ERROR C207 IN LINE 103 OF LCD16X2.C: 'write_cmd_lcd': declared with 'void' parameter list
+ 104   1            write_cmd_lcd(0x0C); 
+*** ERROR C207 IN LINE 104 OF LCD16X2.C: 'write_cmd_lcd': declared with 'void' parameter list
+ 105   1                write_cmd_lcd(0x06); 
+*** ERROR C207 IN LINE 105 OF LCD16X2.C: 'write_cmd_lcd': declared with 'void' parameter list
+ 106   1                write_cmd_lcd(0x01); 
+*** ERROR C207 IN LINE 106 OF LCD16X2.C: 'write_cmd_lcd': declared with 'void' parameter list
+ 107   1                write_cmd_lcd(0x02);
+*** ERROR C207 IN LINE 107 OF LCD16X2.C: 'write_cmd_lcd': declared with 'void' parameter list
+ 108   1      }
+ 109          void write_du_lieu_lcd(char du_lieu) 
+C51 COMPILER V8.05a   LCD16X2                                                              11/18/2019 21:21:52 PAGE 3   
+
+ 110           {    if(du_lieu=='\n')
+ 111   1          {     write_cmd_lcd(0xC0);
+*** ERROR C207 IN LINE 111 OF LCD16X2.C: 'write_cmd_lcd': declared with 'void' parameter list
+ 112   2                     return; 
+ 113   2          }  
+ 114   1                                 if(du_lieu=='\1') 
+ 115   1                                   {   
+ 116   2                                         write_cmd_lcd(0x01);  
+*** ERROR C207 IN LINE 116 OF LCD16X2.C: 'write_cmd_lcd': declared with 'void' parameter list
+ 117   2                                           return; 
+ 118   2                                   }    
+ 119   1                                               busy_lcd();
+ 120   1                                           RW = 0; 
+ 121   1                                           RS = 1; 
+ 122   1                                           EE = 1; 
+ 123   1                                           P2   = du_lieu; 
+ 124   1                                           EE = 0; 
+ 125   1         }  
+ 126           
+ 127          void write_str_lcd(char *str) 
+ 128           {   while(*str)
+ 129   1          {    write_du_lieu_lcd(*str);
+ 130   2                  str++; 
+ 131   2                        }
+ 132   1                        } void main (void) 
+ 133                             { 
+ 134   1                           P0 = 0x00;  
+ 135   1                          P2  = 0x00;  
+ 136   1                               P3 = 0x00;   
+ 137   1                                init_lcd(); 
+ 138   1                                  while(1)  
+ 139   1                                       {  
+ 140   2                                        dl = read_key();
+ 141   2                                        sprintf(&mes[0],”\1 %d”, dl);
+*** ERROR C100 IN LINE 141 OF LCD16X2.C: unprintable character 0x94 skipped
+*** ERROR C141 IN LINE 141 OF LCD16X2.C: syntax error near '\'
+ 142   2                                          write_str_lcd(&mes[0]); 
+ 143   2                                                 delay(1000); 
+ 144   2                                                    }  
+ 145   1                                                        } 
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  12 ERROR(S)

@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"led7.obj" 
+TO "7Thanh" 
+RAMSIZE(256) 

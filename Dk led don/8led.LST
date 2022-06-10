@@ -1,0 +1,50 @@
+C51 COMPILER V8.05a   8LED                                                                 11/07/2019 16:01:44 PAGE 1   
+
+
+C51 COMPILER V8.05a, COMPILATION OF MODULE 8LED
+OBJECT MODULE PLACED IN 8led.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE 8led.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <stdio.h>
+   2          #include <AT89x52.h>
+   3          #include <math.h>
+   4          
+   5          unsigned char DL;
+   6          void dlay(unsigned int time)
+   7          {
+   8   1              int i;
+   9   1              for(i=0;i<time;i++);
+  10   1      }
+  11          void main(void)
+  12          {
+  13   1              int i;
+  14   1              P1=0xFF;
+  15   1              while(1)
+  16   1              {
+  17   2                       DL=0xFF;
+  18   2                      for(i=0;i<9;i++)
+  19   2                      {
+  20   3                                 P1=DL;
+  21   3                                 DL=DL<<1;
+  22   3                                 dlay(20000000000);
+  23   3      
+  24   3                      }
+  25   2      
+  26   2              }
+  27   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     56    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

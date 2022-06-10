@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"bt5.obj" 
+TO "BT5" 
+RAMSIZE(256) 

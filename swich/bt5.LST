@@ -1,0 +1,125 @@
+C51 COMPILER V8.05a   BT5                                                                  11/12/2019 13:45:44 PAGE 1   
+
+
+C51 COMPILER V8.05a, COMPILATION OF MODULE BT5
+OBJECT MODULE PLACED IN bt5.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE bt5.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <AT89x52.h>
+   2          #include <stdio.h>
+   3          #include <math.h>
+   4          
+   5          #define sw0 P1_0
+   6          #define sw1 P1_1
+   7          #define sw2 P1_2
+   8          #define sw3 P1_3
+   9          #define sw4 P1_4
+  10          #define sw5 P1_5
+  11          #define sw6 P1_6
+  12          #define sw7 P1_7
+  13          
+  14          #define d0 P2_0
+  15          #define d1 P2_1
+  16          #define d2 P2_2
+  17          #define d3 P2_3
+  18          #define d4 P2_4
+  19          #define d5 P2_5
+  20          #define d6 P2_6
+  21          #define d7 P2_7
+  22          
+  23          
+  24          unsigned delay(unsigned int time)
+  25          {
+  26   1              int i;
+  27   1              for(i=0;i<time;i++);
+  28   1      }
+*** WARNING C173 IN LINE 28 OF BT5.C: missing return-expression
+  29          
+  30          void main(void)
+  31          {
+  32   1              int i;
+  33   1              P2=0xFF;
+  34   1              P1=0xFF;
+  35   1              if(sw0)
+  36   1              
+  37   1                      for(i=0;i<2;i++)
+  38   1                      {
+  39   2                              d0=~d0;
+  40   2                              delay(100000);
+  41   2                      }
+  42   1              
+  43   1           if(sw1)
+  44   1              
+  45   1                      for(i=0;i<4;i++)
+  46   1                      {
+  47   2                      d1=~d1;
+  48   2                              delay(100000);
+  49   2                      }
+  50   1              
+  51   1              if(sw2)
+  52   1              
+  53   1                      for(i=0;i<6;i++)
+  54   1                      {
+C51 COMPILER V8.05a   BT5                                                                  11/12/2019 13:45:44 PAGE 2   
+
+  55   2                              d2=~d2;
+  56   2                              delay(100000);
+  57   2                      }
+  58   1              
+  59   1              if(sw3)
+  60   1              
+  61   1                      for(i=0;i<8;i++)
+  62   1                      {
+  63   2                              d3=~d3;
+  64   2                              delay(100000);
+  65   2                      }
+  66   1              
+  67   1              if(sw4)
+  68   1              
+  69   1                      for(i=0;i<10;i++)
+  70   1                      {
+  71   2                              d4=~d4;
+  72   2                              delay(100000);
+  73   2                      }
+  74   1              
+  75   1              if(sw5)
+  76   1              
+  77   1                      for(i=0;i<12;i++)
+  78   1                      {
+  79   2                              d5=~d5;
+  80   2                              delay(100000);
+  81   2                      }
+  82   1              
+  83   1              if(sw6)
+  84   1              
+  85   1                      for(i=0;i<14;i++)
+  86   1                      {
+  87   2                              d6=~d6;
+  88   2                              delay(100000);
+  89   2                      }
+  90   1      
+  91   1              if(sw7)
+  92   1              
+  93   1                      for(i=0;i<16;i++)
+  94   1                      {
+  95   2                              d7=~d7;
+  96   2                              delay(100000);
+  97   2                      }
+  98   1              
+  99   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    205    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

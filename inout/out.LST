@@ -1,0 +1,48 @@
+C51 COMPILER V8.05a   OUT                                                                  11/07/2019 21:21:58 PAGE 1   
+
+
+C51 COMPILER V8.05a, COMPILATION OF MODULE OUT
+OBJECT MODULE PLACED IN out.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE out.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<AT89x52.h>
+   2          #include<stdio.h>
+   3          #include<math.h>
+   4          
+   5          unsigned char dl;
+   6          void tre(unsigned int tg)
+   7          {
+   8   1              unsigned int i;
+   9   1              for(i=0;i<tg;i++);
+  10   1      }
+  11          void main(void)
+  12          {
+  13   1              int i;
+  14   1              P0=0xFF;
+  15   1              while(1)
+  16   1              {
+  17   2                      dl=0xFF;
+  18   2                      for(i=0;i<9;i++)
+  19   2                      {
+  20   3                              P0=dl;
+  21   3                              dl=dl<<1;
+  22   3                              tre(20000);
+  23   3                      }
+  24   2              }
+  25   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     56    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
